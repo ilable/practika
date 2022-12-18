@@ -1,0 +1,8 @@
+with open('CAM_table', 'r') as f:
+    for line in f:
+        words = line.split()
+        template = '{:15} {:15} {:15}'
+        if words and words[0].isdigit():
+            vlan, mac, _,ports = words
+#            print(template.format(vlan,mac,ports))
+            print(f"{vlan:9}{mac:20}{ports}")
